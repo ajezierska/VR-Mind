@@ -1,0 +1,157 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//general
+body{
+  color: rgb(55, 53, 57);
+  font-family: 'Open Sans', sans-serif;
+  .container {
+    margin: 0 auto;
+    width: 800px;
+  }
+  .vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+$main-color: rgb(70, 25, 71);
+// header - menu
+.row-first{
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  background-color: $main-color;
+  height: 80px;
+  box-shadow: 2px 2px 2px rgb(33, 33, 33);
+  .container{
+    width: 900px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    .logo{
+      background-image: url(../images/VR_mind_trans_logo.png);
+      width: 135px;
+      height: 30px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 18px;
+    }
+    nav{
+      li{
+        display: inline-block;
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 12px;
+        text-shadow: 2px 2px 2px rgb(33, 33, 33);
+      }
+    }
+    .language a{
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 2px rgb(33, 33, 33);
+    }
+  }
+}
+// header - content
+.row-second{
+  padding-top: 80px;
+  background-image: url(../images/main_img.jpg);
+  background-size: cover;
+  min-height: 670px;
+  height: 90vh;
+  .transbox{
+    background-color: rgba(255, 255, 255, 0.3);
+    height:100%;
+    .main-text{
+      position: absolute;
+      width: 60%;
+      right: 0;
+      top: 269px;
+      text-align: right;
+      @media(max-width: 1260px){
+        width: 100%;
+        text-align: center;
+        font-size: 0.5em;
+      }
+      div{
+        padding: 20px 50px 20px 20px;
+        margin-bottom: 20px;
+        border-radius: 2px;
+        p{
+          font-size: 23px;
+        }
+        &:first-child{
+          background-color: rgba(255, 255, 255, 0.5);
+          h1{
+            text-transform: uppercase;
+            font-size: 43px;
+          }
+          p{
+            font-size: 35px;
+          }
+        }
+        &:last-child{
+          background-color: rgba(70, 25, 71, 0.5);
+          color: white;
+          p:first-child{
+            font-size: 28px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+// section - general
+section{
+  margin-top: 30px;
+  h2{
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+  .vertical-line{
+    background-color: #373539;
+    height: 5px;
+    width: 125px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+  }
+  p{
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+// section - first - Innowacje kluczem do lepszej jakości życia
+
+#first-section {
+  .col-2{
+    display: flex;
+    justify-content: center;
+    .first-section-img{
+      background-image: url(../images/graph.png);
+      background-size: cover;
+      height: 181px;
+      width: 332px;
+      display: flex;
+      align-self: center;
+      margin-right: 45px;
+    }
+    ul{
+      list-style-type: circle;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-size: 20px;
+      color: $main-color;
+    }
+  }
+}
