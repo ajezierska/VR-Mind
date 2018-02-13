@@ -9,7 +9,7 @@ body{
   font-family: 'Open Sans', sans-serif;
   .container {
     margin: 0 auto;
-    width: 800px;
+    width: 850px;
   }
   .vertical {
     display: flex;
@@ -47,14 +47,14 @@ $main-color: rgb(70, 25, 71);
         display: inline-block;
         text-transform: uppercase;
         padding: 12px;
-        text-shadow: 2px 2px 2px rgb(33, 33, 33);
+        // text-shadow: 2px 2px 2px rgb(33, 33, 33);
       }
     }
     .language a{
       color: white;
       text-decoration: none;
       text-transform: uppercase;
-      text-shadow: 2px 2px 2px rgb(33, 33, 33);
+      // text-shadow: 2px 2px 2px rgb(33, 33, 33);
     }
   }
 }
@@ -72,7 +72,7 @@ $main-color: rgb(70, 25, 71);
       position: absolute;
       width: 60%;
       right: 0;
-      top: 269px;
+      top: 170px;
       text-align: right;
       @media(max-width: 1260px){
         width: 100%;
@@ -80,7 +80,7 @@ $main-color: rgb(70, 25, 71);
         font-size: 0.5em;
       }
       div{
-        padding: 20px 50px 20px 20px;
+        padding: 20px 100px 20px 20px;
         margin-bottom: 20px;
         border-radius: 2px;
         p{
@@ -110,11 +110,19 @@ $main-color: rgb(70, 25, 71);
 }
 // section - general
 section{
-  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   h2{
     font-weight: 400;
     margin-bottom: 30px;
-    font-size: 26px;
+    font-size: 36px;
+    text-align: center;
+  }
+  h3{
+    font-weight: 400;
+    margin-bottom: 50px;
+    font-size: 25px;
+    text-align: center;
   }
   .vertical-line{
     background-color: #373539;
@@ -152,6 +160,115 @@ section{
       padding-bottom: 50px;
       font-size: 20px;
       color: $main-color;
+    }
+  }
+}
+
+// section - second - oferta
+
+#second-section {
+  background-color: #dfddde;
+  .col-2{
+    display: flex;
+    justify-content: center;
+    .second-section-img{
+      background-image: url(../images/computer.png);
+      background-size: cover;
+      height: 240px;
+      width: 400px;
+      display: flex;
+      align-self: center;
+      margin-left: 45px;
+    }
+    ul{
+      font-weight: 300;
+      text-align: right;
+      list-style-type: none;
+      padding-top: 10px;
+      padding-bottom: 50px;
+      font-size: 18px;
+      line-height: 30px;
+      h4{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      li{
+        padding-right: 20px;
+      }
+    }
+  }
+  button{
+    background-color: #cdcdcd;;
+    color: white;
+    width: 270px;
+    height: 63px;
+    text-transform: uppercase;
+    font-size: 25px;
+    border: none;
+    box-shadow: 1px 1px 1px #878787;
+  }
+}
+
+// section - third - technologia
+
+#third-section {
+  .third-section-img{
+    background-image: url(../images/urzadzenia.jpg);
+    //in progress
+  }
+}
+// section - forth - aktualności
+#forth-section {
+  .col-2{
+    display: flex;
+    justify-content: center;
+    .forth-section-img{
+      background-image: url(../images/PNIR_2017_nominacja1.png);
+      background-size: cover;
+      height: 270px;
+      width: 415px;
+      display: flex;
+      align-self: center;
+      margin-right: 45px;
+    }
+    p{
+      text-align: left;
+      width: 60%
+    }
+  }
+}
+//section - fifth - o nas
+#fifth-section {
+  background-color: #eeeeef;
+  .more-content{
+    cursor: pointer;
+  }
+}
+//section - sixth - zespół
+#sixth-section {
+  background-color: #231f20;
+  color: white;
+  .col-2{
+    display: flex;
+    justify-content: center;
+    .main-team-img{
+      background-image: url(../images/marcin_cz_sm.jpg);
+      background-size: cover;
+      height: 270px;
+      width: 415px;
+      display: flex;
+      align-self: center;
+      margin-right: 45px;
+    }
+    .col2-content{
+      h3, h4, p{
+          text-align: left;
+          width: 60%;
+      }
+    }
+    .more-content{
+      cursor: pointer;
     }
   }
 }
