@@ -9,9 +9,9 @@ body{
   font-family: 'Open Sans', sans-serif;
   .container {
     margin: 0 auto;
-    width: 850px;
+    max-width: 850px;
   }
-  .vertical {
+  .horizontal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,31 +30,37 @@ $main-color: rgb(70, 25, 71);
   height: 80px;
   box-shadow: 2px 2px 2px rgb(33, 33, 33);
   .container{
-    width: 900px;
+    max-width: 1400px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
+    padding: 0 50px;
     .logo{
       background-image: url(../images/VR_mind_trans_logo.png);
-      width: 135px;
-      height: 30px;
-      background-size: cover;
+      width: 180px;
+      height: 40px;
+      background-size: contain;
       background-position: center;
       margin-bottom: 18px;
+      background-repeat: no-repeat;
     }
     nav{
-      li{
-        display: inline-block;
-        display: inline-block;
-        text-transform: uppercase;
-        padding: 12px;
-        // text-shadow: 2px 2px 2px rgb(33, 33, 33);
+      ul{
+        display: flex;
+        justify-content: center;
+        li{
+          display: inline-block;
+          display: inline-block;
+          text-transform: uppercase;
+          padding: 0 40px;
+          // text-shadow: 2px 2px 2px rgb(33, 33, 33);
+        }
       }
     }
     .language a{
-      color: white;
+      color: #806081;
       text-decoration: none;
       text-transform: uppercase;
       // text-shadow: 2px 2px 2px rgb(33, 33, 33);
@@ -131,7 +137,7 @@ section{
     font-size: 25px;
     text-align: center;
   }
-  .vertical-line{
+  .horizontal-line{
     background-color: #373539;
     height: 5px;
     width: 125px;
@@ -178,7 +184,6 @@ section{
     width: 400px;
     display: flex;
     align-self: center;
-    margin-left: 45px;
   }
   ul{
     font-weight: 300;
@@ -257,7 +262,7 @@ section{
     margin-top: 10px;
   }
   .col2-content{
-    width: 50%;
+    width: 55%;
     h3, h4, p {
       text-align: left;
     }
@@ -307,5 +312,138 @@ section{
         background-position: center;
       }
     }
+  }
+}
+
+//section - seventh - zaufali nam
+#seventh-section {
+  .first-partner-img{
+    background-image: url(../images/logo_wpt.png);
+  }
+  .second-partner-img{
+    background-image: url(../images/techland_logo.jpg);
+  }
+  .third-partner-img{
+    background-image: url(../images/logo-dzikijez.png);
+  }
+  .forth-partner-img{
+    background-image: url(../images/uniberg.jpg);
+  }
+  .fifth-partner-img{
+    background-image: url(../images/ikea_logo.png);
+  }
+  div{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .col-2{
+    width: 100%;
+    padding-top: 15px;
+    div{
+      width: 45%;
+      height: 100px;
+    }
+  }
+  .col-3{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 15px;
+    div{
+      width: 31%;
+      height: 150px;
+    }
+  }
+}
+//section - eighth - form
+#eighth-section {
+  background-color: rgba(70, 25, 71, 0.83);
+  .col-2{
+    width: 100%;
+    div{
+      margin: 10px;
+      width: 50%;
+      &.form-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+      }
+      input{
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+      }
+      textarea{
+        width: 100%;
+        resize: none;
+        height: 100%;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+      }
+    }
+  }
+  .submit-container{
+    display: flex;
+    justify-content: center;
+    input[type="submit"]{
+      background-color: $main-color;
+      color: white;
+      border: none;
+      width: 150px;
+      height: 40px;
+      margin-top: 15px;
+      outline: none;
+    }
+  }
+}
+//section - ninth - contact
+#ninth-section {
+  .col-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .ninth-section-left {
+      width: 40%;
+      text-align: right;
+      .logo-contact{
+        background-image: url(../images/vrmind_logo_fiol.png);
+        width: 250px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    .vertical-line{
+      background-color: #373539;
+      height: 60px;
+      width: 5px;
+      margin-bottom: 30px;
+      border-radius: 2px;
+    }
+    .contact-info{
+      width: 40%;
+      p{
+        text-align: left;
+      }
+      p:last-child{
+        font-weight: 700;
+      }
+    }
+  }
+}
+//footer
+footer{
+  background-color: rgb(55, 55, 55);
+  color: white;
+  height: 50px;
+  font-weight: 300;
+  .container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 850px;
+    height: 100%;
   }
 }
