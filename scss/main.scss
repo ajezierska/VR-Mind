@@ -16,6 +16,9 @@ body{
     flex-direction: column;
     align-items: center;
   }
+  button {
+    outline: none;
+  }
 }
 $main-color: rgb(70, 25, 71);
 // header - menu
@@ -112,6 +115,10 @@ $main-color: rgb(70, 25, 71);
 section{
   padding-top: 30px;
   padding-bottom: 30px;
+  .col-2{
+    display: flex;
+    justify-content: center;
+  }
   h2{
     font-weight: 400;
     margin-bottom: 30px;
@@ -142,25 +149,21 @@ section{
 // section - first - Innowacje kluczem do lepszej jakości życia
 
 #first-section {
-  .col-2{
+  .first-section-img{
+    background-image: url(../images/graph.png);
+    background-size: cover;
+    height: 181px;
+    width: 332px;
     display: flex;
-    justify-content: center;
-    .first-section-img{
-      background-image: url(../images/graph.png);
-      background-size: cover;
-      height: 181px;
-      width: 332px;
-      display: flex;
-      align-self: center;
-      margin-right: 45px;
-    }
-    ul{
-      list-style-type: circle;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      font-size: 20px;
-      color: $main-color;
-    }
+    align-self: center;
+    margin-right: 45px;
+  }
+  ul{
+    list-style-type: circle;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    color: $main-color;
   }
 }
 
@@ -168,34 +171,30 @@ section{
 
 #second-section {
   background-color: #dfddde;
-  .col-2{
+  .second-section-img{
+    background-image: url(../images/computer.png);
+    background-size: cover;
+    height: 240px;
+    width: 400px;
     display: flex;
-    justify-content: center;
-    .second-section-img{
-      background-image: url(../images/computer.png);
-      background-size: cover;
-      height: 240px;
-      width: 400px;
-      display: flex;
-      align-self: center;
-      margin-left: 45px;
+    align-self: center;
+    margin-left: 45px;
+  }
+  ul{
+    font-weight: 300;
+    text-align: right;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 30px;
+    h4{
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
-    ul{
-      font-weight: 300;
-      text-align: right;
-      list-style-type: none;
-      padding-top: 10px;
-      padding-bottom: 50px;
-      font-size: 18px;
-      line-height: 30px;
-      h4{
-        font-size: 20px;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-      }
-      li{
-        padding-right: 20px;
-      }
+    li{
+      padding-right: 20px;
     }
   }
   button{
@@ -219,23 +218,20 @@ section{
   }
 }
 // section - forth - aktualności
+
 #forth-section {
-  .col-2{
+  .forth-section-img{
+    background-image: url(../images/PNIR_2017_nominacja1.png);
+    background-size: cover;
+    height: 270px;
+    width: 415px;
     display: flex;
-    justify-content: center;
-    .forth-section-img{
-      background-image: url(../images/PNIR_2017_nominacja1.png);
-      background-size: cover;
-      height: 270px;
-      width: 415px;
-      display: flex;
-      align-self: center;
-      margin-right: 45px;
-    }
-    p{
-      text-align: left;
-      width: 60%
-    }
+    align-self: center;
+    margin-right: 45px;
+  }
+  .col-2 p{
+    text-align: left;
+    width: 60%
   }
 }
 //section - fifth - o nas
@@ -250,25 +246,66 @@ section{
   background-color: #231f20;
   color: white;
   .col-2{
+    justify-content: space-between;
+  }
+  .main-team-img{
+    background-image: url(../images/marcin_cz.jpg);
+    height: 450px;
+    width: 40%;
     display: flex;
-    justify-content: center;
-    .main-team-img{
-      background-image: url(../images/marcin_cz_sm.jpg);
-      background-size: cover;
-      height: 270px;
-      width: 415px;
-      display: flex;
-      align-self: center;
-      margin-right: 45px;
+    margin-right: 45px;
+    margin-top: 10px;
+  }
+  .col2-content{
+    width: 50%;
+    h3, h4, p {
+      text-align: left;
     }
-    .col2-content{
-      h3, h4, p{
-          text-align: left;
-          width: 60%;
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    h4 {
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    h3 {
+      margin-bottom: 15px;
+
+    }
+  }
+  .more-content{
+    cursor: pointer;
+  }
+  .col3-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    h3{
+      margin-bottom: 10px;
+    }
+    .team-member-first{
+        background-image: url(../images/martyna_sm.jpg);
+    }
+    .team-member-second{
+        background-image: url(../images/marcin_l_sm.jpg);
+    }
+    .team-member-third{
+        background-image: url(../images/arek_sm.jpg);
+    }
+    .team-member-forth{
+        background-image: url(../images/jakub_sm.jpg);
+    }
+    &>div{
+      width: 31%;
+      text-align: center;
+      div{
+        height: 280px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
       }
-    }
-    .more-content{
-      cursor: pointer;
     }
   }
 }
