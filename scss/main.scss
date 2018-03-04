@@ -222,9 +222,36 @@ section{
 // section - third - technologia
 
 #third-section {
+  padding-bottom: 0;
+  background-color: rgba(255,255,255,1);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,209,209,1) 100%);
   .third-section-img{
-    background-image: url(../images/urzadzenia.jpg);
-    //in progress
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    overflow: hidden;
+    div {
+    height: 348px;
+    width: 421px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    }
+    .phone-device {
+      background-image: url(../images/phone.png);
+      width: 211px;
+    }
+    .computer-device {
+      background-image: url(../images/computer_dev.png);
+    }
+    .vive-device {
+      background-image: url(../images/vive.png);
+    }
+    .vr-device {
+      background-image: url(../images/vr.png);
+    }
   }
 }
 // section - forth - aktualności
@@ -252,6 +279,10 @@ section{
   }
 }
 //section - sixth - zespół
+.hidden{
+  display: none;
+}
+
 #sixth-section {
   background-color: #231f20;
   color: white;
@@ -288,10 +319,27 @@ section{
   .more-content{
     cursor: pointer;
   }
+  .team-container{
+    position: relative;
+    width: 100%;
+    .fa-caret-left, .fa-caret-right{
+      position: absolute;
+      top: 110px;
+    }
+    .fa-caret-left{
+      left: -50px;
+      font-size: 60px;
+    }
+    .fa-caret-right{
+      right: -50px;
+      font-size: 60px;
+    }
+  }
   .col3-content{
     display: flex;
     justify-content: space-between;
     width: 100%;
+
     h3{
       margin-bottom: 10px;
     }
@@ -432,8 +480,12 @@ section{
       p{
         text-align: left;
       }
-      p:last-child{
+      .info-mail{
         font-weight: 700;
+      }
+      .fa-youtube-square, .fa-facebook-square{
+        font-size: 50px;
+        padding-right: 10px;
       }
     }
   }

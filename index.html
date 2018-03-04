@@ -2,9 +2,12 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR Mind</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
     <header>
@@ -106,14 +109,18 @@
   <section id="third-section">
     <div class="container">
       <div class="horizontal">
-          <h2>Technologia</h2>
-          <h3>Aplikacje działają na komputerach stacjonarnych, zestawach VR i urządzeniach mobilnych</h3>
+        <h2>Technologia</h2>
+        <h3>Aplikacje działają na komputerach stacjonarnych, zestawach VR i urządzeniach mobilnych</h3>
         <div class="horizontal-line">
-        </div>
-          <div class="third-section-img">
-          </div>
       </div>
     </div>
+      </div>
+          <div class="third-section-img">
+            <div class="phone-device"></div>
+            <div class="computer-device"></div>
+            <div class="vive-device"></div>
+            <div class="vr-device"></div>
+          </div>
   </div>
   </section>
   <!-- section - forth - aktualności -->
@@ -201,29 +208,37 @@
           </div>
         </div>
         <!-- Rest of team -->
-        <div class="col3-content">
-          <div>
-            <div class="team-member-first"></div>
-            <h3>Martyna Piątas</h3>
-            <span>CEO & Founder</span>
+        <div class="team-container">
+          <div class="prev">
+            <i class="fas fa-caret-left prev"></i>
           </div>
-          <div>
-            <div class="team-member-second"></div>
-            <h3>Marcin Łopusiewicz</h3>
-            <span>Unity developer</span>
+          <div class="col3-content team-list">
+            <div>
+              <div class="team-member-forth"></div>
+              <h3>Jakub Koban</h3>
+              <span>Software & Hardware Engineer</span>
+            </div>
+            <div>
+              <div class="team-member-first"></div>
+              <h3>Martyna Piątas</h3>
+              <span>CEO & Founder</span>
+            </div>
+            <div>
+              <div class="team-member-second"></div>
+              <h3>Marcin Łopusiewicz</h3>
+              <span>Unity developer</span>
+            </div>
+            <div>
+              <div class="team-member-third"></div>
+              <h3>Arkadiusz Ziółkowski</h3>
+              <span>Software & Hardware Engineer</span>
+            </div>
           </div>
-          <div>
-            <div class="team-member-third"></div>
-            <h3>Arkadiusz Ziółkowski</h3>
-            <span>Software & Hardware Engineer</span>
+          <div class="next">
+            <i class="fas fa-caret-right"></i>
           </div>
-          <!-- <div>
-            <div class="team-member-forth"></div>
-            <h3>Jakub Koban</h3>
-            <span>Software & Hardware Engineer</span>
-          </div> -->
+        </div>
       </div>
-    </div>
   </div>
   </section>
   <!-- section - seventh - zaufali nam -->
@@ -292,11 +307,13 @@
               ul.Duńska 9
               <br/>54-427 Wrocław
             </p>
-            <p>
+            <p class="info-mail">
               media@vrmind.pl
               <br/>
               sprzedaz@vrmind.pl
             </p>
+            <i class="fab fa-youtube-square"></i>
+            <i class="fab fa-facebook-square"></i>
           </div>
         </div>
       </div>
