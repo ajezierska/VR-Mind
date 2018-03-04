@@ -473,6 +473,11 @@ section{
       }
     }
   }
+  .error{
+    padding-left: 10px;
+    color: red;
+    font-weight: 600;
+  }
   .submit-container{
     display: flex;
     justify-content: center;

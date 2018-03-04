@@ -65,4 +65,44 @@ $('.more-content').on('click', function(){
     moreText.text('czytaj więcej');
   }
 })
+
+//form - validation
+
+var error = $('.error');
+
+function validate() {
+  var email = $('input[type="email"]');
+  var name = $('input[type="text"]');
+  var text = $('textarea');
+
+  if ( email.val().length == 0 ) {
+    error.text("* Uzupełnij adres e-mail, żeby wysłać wiadomość!");
+    return false;
+  }
+  if( email.val().indexOf('@') == -1){
+    error.text("* Wpisz poprawny adres e-mail (musi zawierać '@'), żeby wysłać wiadomość!");
+    return false;
+  }
+  if( name.val().length == 0 ) {
+    error.text("* Uzupełnij pole - imię i nazwisko, żeby wysłać wiadomość!");
+    return false;
+  }
+  if(text.val().length == 0) {
+      error.text("* Uzupełnij pole - treść wiadomości!");
+    return false;
+  }
+  return true;
+}
+$('input[type="submit"]').on("click", function(event) {
+  if(!validate()) {
+    event.preventDefault();
+  }else {
+    error.css('color','white');
+    error.text("Wiadomość wysłana");
+  }
+})
+
+
+
+
 });
