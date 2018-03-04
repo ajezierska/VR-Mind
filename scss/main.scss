@@ -45,6 +45,10 @@ $main-color: rgb(70, 25, 71);
       background-position: center;
       margin-bottom: 18px;
       background-repeat: no-repeat;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.5;
+      }
     }
     nav{
       ul{
@@ -57,7 +61,10 @@ $main-color: rgb(70, 25, 71);
           a{
             color: white;
             text-decoration: none;
-
+            cursor: pointer;
+            &:hover{
+              opacity: 0.5;
+            }
           }
 
           // text-shadow: 2px 2px 2px rgb(33, 33, 33);
@@ -216,6 +223,10 @@ section{
     font-size: 25px;
     border: none;
     box-shadow: 1px 1px 1px #878787;
+    cursor: pointer;
+    &:hover{
+      background-color: #b4b4b4;
+    }
   }
 }
 
@@ -276,6 +287,9 @@ section{
   background-color: #eeeeef;
   .more-content{
     cursor: pointer;
+    &:hover{
+      opacity: 0.5;
+    }
   }
 }
 //section - sixth - zespół
@@ -299,12 +313,26 @@ section{
   }
   .col2-content{
     width: 55%;
+    max-height: 484px;
     h3, h4, p {
       text-align: left;
     }
     p {
       font-size: 16px;
       margin-bottom: 15px;
+    }
+    p.more{
+      font-weight: 600;
+      color: #9b9b9c;
+      margin-bottom: 5px;
+    }
+    ul.more{
+      li{
+        font-weight: 300;
+        font-size: 14px;
+        padding: 5px 0;
+        color: #9b9b9c;
+      }
     }
     h4 {
       font-size: 20px;
@@ -318,6 +346,9 @@ section{
   }
   .more-content{
     cursor: pointer;
+    &:hover{
+      opacity: 0.5;
+    }
   }
   .team-container{
     position: relative;
@@ -325,6 +356,11 @@ section{
     .fa-caret-left, .fa-caret-right{
       position: absolute;
       top: 110px;
+      color: #3d3d3d;
+      cursor: pointer;
+      &:hover{
+        color: #9f9f9f;
+      }
     }
     .fa-caret-left{
       left: -50px;
@@ -448,11 +484,16 @@ section{
       height: 40px;
       margin-top: 15px;
       outline: none;
+      cursor: pointer;
+      &:hover{
+        background-color: #b4a5b4;
+      }
     }
   }
 }
 //section - ninth - contact
 #ninth-section {
+  height: 384px;
   .col-3{
     display: flex;
     justify-content: space-between;
@@ -466,6 +507,11 @@ section{
         height: 100px;
         background-size: contain;
         background-repeat: no-repeat;
+        cursor: pointer;
+        &:hover{
+          opacity: 0.6;
+          width: 260px;
+        }
       }
     }
     .vertical-line{
@@ -486,6 +532,10 @@ section{
       .fa-youtube-square, .fa-facebook-square{
         font-size: 50px;
         padding-right: 10px;
+        cursor: pointer;
+        &:hover{
+          opacity: 0.5;
+        }
       }
     }
   }

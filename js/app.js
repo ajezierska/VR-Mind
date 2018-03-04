@@ -48,5 +48,21 @@ next.on('click',function () {
 //smoothscroll -team-changing
 
 
+//czytaj więcej - open section
+var more = $('.more');
+more.addClass('hidden');
 
+console.log(more);
+$('.more-content').on('click', function(){
+  var moreText = $('.more-content span');
+  if (more.hasClass('hidden')) {
+    more.removeClass('hidden');
+    moreText.text('czytaj mniej');
+    $('.col2-content').css('overflow','auto');
+
+  }else {
+    more.addClass('hidden');
+    moreText.text('czytaj więcej');
+  }
+})
 });
