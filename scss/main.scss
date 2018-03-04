@@ -52,9 +52,14 @@ $main-color: rgb(70, 25, 71);
         justify-content: center;
         li{
           display: inline-block;
-          display: inline-block;
           text-transform: uppercase;
           padding: 0 40px;
+          a{
+            color: white;
+            text-decoration: none;
+
+          }
+
           // text-shadow: 2px 2px 2px rgb(33, 33, 33);
         }
       }
@@ -119,8 +124,8 @@ $main-color: rgb(70, 25, 71);
 }
 // section - general
 section{
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 85px;
+  padding-bottom: 85px;
   .col-2{
     display: flex;
     justify-content: center;
@@ -447,3 +452,4 @@ footer{
     height: 100%;
   }
 }
+//mediaquery - menu 1195px
