@@ -66,13 +66,25 @@ $main-color: rgb(70, 25, 71);
       ul{
         display: flex;
         justify-content: center;
+        list-style-type: none;
+        @media(max-width: 750px){
+        flex-direction: column;
+        background-color: $main-color;
+        margin-top: 242px;
+        padding: 20px;
+        text-align: center;
+        width: 400px;
+        }
         li{
-          display: inline-block;
           text-transform: uppercase;
           padding: 0 40px;
           @media(max-width: 1195px){
             padding: 0 15px;
           }
+            @media(max-width: 750px){
+              padding: 5px;
+              border-bottom: 0.2px solid rgba(255, 255, 255, 0.3);
+            }
           a{
             color: white;
             text-decoration: none;
@@ -85,6 +97,7 @@ $main-color: rgb(70, 25, 71);
       }
       @media(max-width: 750px){
         display: none;
+
       }
     }
     .language a{

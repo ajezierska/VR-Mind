@@ -122,21 +122,38 @@ $('input[type="submit"]').on("click", function(event) {
 // RWD - hamburger
 $('.open-menu').addClass('hidden');
 
+// a) open menu on click
 $('.hamburger').on('click', function() {
     $('.open-menu').toggleClass('hidden');
     $('.close-menu').toggleClass('hidden');
+
+    if ($('.open-menu').hasClass('hidden')) {
+      $('nav').css('display','none')
+    }else {
+      $('nav').css('display','block')
+    }
+})
+// b) hide menu after click on li
+$('nav li').on('click', function() {
+      $('nav').css('display','none');
+      $('.open-menu').addClass('hidden');
+      $('.close-menu').removeClass('hidden');
 })
 
+// c) always show menu after resize(>750px) window and hide after resize(<750px)
+$(document).load($(window).bind("resize", checkPosition));
 
-
-
-
-
-
-
-
-
-
+function checkPosition()
+{
+    if($(window).width() > 750)
+    {
+        $('nav').css('display','block')
+    } else {
+        $('nav').css('display','none')
+        $('.close-menu').removeClass('hidden');
+        $('.open-menu').addClass('hidden');
+    }
+}
 
 
 });
