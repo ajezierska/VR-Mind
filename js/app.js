@@ -15,7 +15,8 @@ $("nav a").on('click', function(event) {
    });
  })
 
-//team-changing
+//team-changing - carousel
+
 var prev = $(".prev");
 var next = $(".next");
 
@@ -38,7 +39,6 @@ prev.on('click',function () {
     }
     teamList.eq(picsIndex).addClass('hidden');
 })
-
 
 next.on('click',function (event) {
   // teamContainer.addClass('animation-next');
@@ -65,6 +65,7 @@ next.on('click',function (event) {
 
 
 //czytaj więcej - open section
+
 var more = $('.more');
 more.addClass('hidden');
 
@@ -118,6 +119,22 @@ $('input[type="submit"]').on("click", function(event) {
     error.text("Wiadomość wysłana");
   }
 })
+// RWD - hamburger
+$('.open-menu').addClass('hidden');
+
+$('.hamburger').on('click', function() {
+    $('.open-menu').toggleClass('hidden');
+    $('.close-menu').toggleClass('hidden');
+})
+
+
+
+
+
+
+
+
+
 
 
 

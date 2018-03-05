@@ -10,6 +10,9 @@ body{
   .container {
     margin: 0 auto;
     max-width: 850px;
+    @media(max-width: 930px){
+      margin: 0 30px;
+    }
   }
   .horizontal {
     display: flex;
@@ -38,6 +41,7 @@ $main-color: rgb(70, 25, 71);
     color: white;
     padding: 0 50px;
     @media(max-width: 960px){
+      margin: 0;
       padding: 0 20px;
     }
     .logo{
@@ -87,12 +91,24 @@ $main-color: rgb(70, 25, 71);
       color: #806081;
       text-decoration: none;
       text-transform: uppercase;
+      @media(max-width: 750px){
+        display: none;
+      }
     }
   }
 }
 //menu - hamburger
 .hamburger{
   display: none;
+  background-color: $main-color;
+  border: none;
+  .fa-times, .fa-bars {
+    color: white;
+    font-size: 32px;
+  }
+  @media(max-width: 750px){
+    display: block;
+  }
 }
 
 
@@ -184,6 +200,10 @@ section{
     line-height: 26px;
   }
 }
+.hidden{
+  display: none;
+}
+
 // section - first - Innowacje kluczem do lepszej jakości życia
 
 #first-section {
@@ -313,10 +333,6 @@ section{
   }
 }
 //section - sixth - zespół
-.hidden{
-  display: none;
-}
-
 #sixth-section {
   background-color: #231f20;
   color: white;
@@ -330,6 +346,7 @@ section{
     display: flex;
     margin-right: 45px;
     margin-top: 10px;
+    background-position: center;
   }
   .col2-content{
     width: 55%;
@@ -389,13 +406,13 @@ section{
     .fa-caret-left{
       left: -50px;
       @media(max-width: 990px){
-        left: -30px;
+        left: -25px;
       }
     }
     .fa-caret-right{
       right: -50px;
       @media(max-width: 990px){
-        right: -30px;
+        right: -25px;
       }
     }
   }
