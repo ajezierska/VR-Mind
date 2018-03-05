@@ -37,6 +37,9 @@ $main-color: rgb(70, 25, 71);
     align-items: center;
     color: white;
     padding: 0 50px;
+    @media(max-width: 960px){
+      padding: 0 20px;
+    }
     .logo{
       background-image: url(../images/VR_mind_trans_logo.png);
       width: 180px;
@@ -49,6 +52,11 @@ $main-color: rgb(70, 25, 71);
       &:hover{
         opacity: 0.5;
       }
+      @media(max-width: 960px){
+        width: 100px;
+        height: 25px;
+        margin-bottom: 15px;
+      }
     }
     nav{
       ul{
@@ -58,6 +66,9 @@ $main-color: rgb(70, 25, 71);
           display: inline-block;
           text-transform: uppercase;
           padding: 0 40px;
+          @media(max-width: 1195px){
+            padding: 0 15px;
+          }
           a{
             color: white;
             text-decoration: none;
@@ -66,19 +77,25 @@ $main-color: rgb(70, 25, 71);
               opacity: 0.5;
             }
           }
-
-          // text-shadow: 2px 2px 2px rgb(33, 33, 33);
         }
+      }
+      @media(max-width: 750px){
+        display: none;
       }
     }
     .language a{
       color: #806081;
       text-decoration: none;
       text-transform: uppercase;
-      // text-shadow: 2px 2px 2px rgb(33, 33, 33);
     }
   }
 }
+//menu - hamburger
+.hamburger{
+  display: none;
+}
+
+
 // header - content
 .row-second{
   padding-top: 80px;
@@ -104,6 +121,9 @@ $main-color: rgb(70, 25, 71);
         padding: 20px 100px 20px 20px;
         margin-bottom: 20px;
         border-radius: 2px;
+        @media(max-width: 1260px){
+          padding: 20px;
+        }
         p{
           font-size: 23px;
         }
@@ -357,18 +377,26 @@ section{
       position: absolute;
       top: 110px;
       color: #3d3d3d;
+      font-size: 60px;
       cursor: pointer;
       &:hover{
         color: #9f9f9f;
       }
+      @media(max-width: 990px){
+        font-size: 40px;
+      }
     }
     .fa-caret-left{
       left: -50px;
-      font-size: 60px;
+      @media(max-width: 990px){
+        left: -30px;
+      }
     }
     .fa-caret-right{
       right: -50px;
-      font-size: 60px;
+      @media(max-width: 990px){
+        right: -30px;
+      }
     }
   }
   .col3-content{
@@ -559,4 +587,34 @@ footer{
     height: 100%;
   }
 }
-//mediaquery - menu 1195px
+//animation team-changing smooth-scroll
+.animation-next{
+  animation-name: next;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+
+}
+.animation-prev{
+  animation-name: prev;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+
+@keyframes next {
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translate(250px);
+  }
+}
+
+@keyframes prev {
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translate(-250px);
+  }
+}

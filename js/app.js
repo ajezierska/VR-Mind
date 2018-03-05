@@ -4,6 +4,9 @@ $(document).ready(function(){
 //smoothscroll - menu
 
 $("nav a").on('click', function(event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+  }
    var hash = this.hash;
    $('html, body').animate({
      scrollTop: $(hash).offset().top
@@ -17,15 +20,15 @@ var prev = $(".prev");
 var next = $(".next");
 
 var teamList = $(".team-list>div");
+var teamContainer = $(".team-list");
 var picsIndex = 0;
 
 console.log(teamList[0]);
 teamList.eq(0).addClass('hidden');
 
-console.log(next);;
 
 prev.on('click',function () {
-  console.log("blee");
+    // teamContainer.addClass('animation-prev');
     var hidden = $(".hidden")
     $(".team-list").append(hidden);
     teamList.eq(picsIndex).removeClass('hidden');
@@ -35,7 +38,14 @@ prev.on('click',function () {
     }
     teamList.eq(picsIndex).addClass('hidden');
 })
-next.on('click',function () {
+
+
+next.on('click',function (event) {
+  // teamContainer.addClass('animation-next');
+  // teamContainer.on('animationend',function(event){
+  //   teamContainer.removeClass('animation-next');
+  // })
+  // var st = setTimeout(function () {
     var hidden = $(".hidden")
     $(".team-list").prepend(hidden);
     teamList.eq(picsIndex).removeClass('hidden');
@@ -44,24 +54,31 @@ next.on('click',function () {
       picsIndex = teamList.length -1;
     }
     teamList.eq(picsIndex).addClass('hidden');
+  // }, 1000);
 })
-//smoothscroll -team-changing
+
+
+
+//smoothscroll -team-changing - in progress
+
+
 
 
 //czytaj więcej - open section
 var more = $('.more');
 more.addClass('hidden');
 
-console.log(more);
+
 $('.more-content').on('click', function(){
-  var moreText = $('.more-content span');
-  if (more.hasClass('hidden')) {
-    more.removeClass('hidden');
+  var moreText = $(this).children().children('span');
+
+  if ($(this).siblings('.more').hasClass('hidden')) {
+    $(this).siblings('.more').removeClass('hidden');
     moreText.text('czytaj mniej');
     $('.col2-content').css('overflow','auto');
 
   }else {
-    more.addClass('hidden');
+    $(this).siblings('.more').addClass('hidden');
     moreText.text('czytaj więcej');
   }
 })
