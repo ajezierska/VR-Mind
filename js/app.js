@@ -41,37 +41,86 @@ function windowSize() {
       teamList.eq(2).removeClass('hidden');
       teamList.eq(3).removeClass('hidden');
 
+      prev.on('click', bigWindowPrev);
+      next.on('click', bigWindowNext);
+
   } else {
-      teamList.eq(0).addClass('hidden');
-      teamList.eq(1).removeClass('hidden');
+      teamList.eq(0).removeClass('hidden');
+      teamList.eq(1).addClass('hidden');
       teamList.eq(2).addClass('hidden');
       teamList.eq(3).addClass('hidden');
+
+      prev.on('click', smallWindowPrev);
+      next.on('click', smallWindowNext);
   }
 }
 
   //  b)  events - arrows
 
-prev.on('click',function () {
-    var hidden = $(".hidden")
-    $(".team-list").append(hidden);
-    teamList.eq(picsIndex).removeClass('hidden');
-    picsIndex++;
-    if(picsIndex === teamList.length){
-      picsIndex = 0;
-    }
-    teamList.eq(picsIndex).addClass('hidden');
-})
+function bigWindowPrev() {
+  var hidden = $(".hidden")
+  $(".team-list").append(hidden);
+  teamList.eq(picsIndex).removeClass('hidden');
+  picsIndex++;
+  if(picsIndex === teamList.length){
+    picsIndex = 0;
+  }
+  teamList.eq(picsIndex).addClass('hidden');
+}
 
-next.on('click',function (event) {
-    var hidden = $(".hidden")
-    $(".team-list").prepend(hidden);
-    teamList.eq(picsIndex).removeClass('hidden');
-    picsIndex--;
-    if(picsIndex < 0){
-      picsIndex = teamList.length -1;
-    }
-    teamList.eq(picsIndex).addClass('hidden');
-})
+function bigWindowNext() {
+  var hidden = $(".hidden")
+  $(".team-list").prepend(hidden);
+  teamList.eq(picsIndex).removeClass('hidden');
+  picsIndex--;
+  if(picsIndex < 0){
+    picsIndex = teamList.length -1;
+  }
+  teamList.eq(picsIndex).addClass('hidden');
+}
+
+function smallWindowNext() {
+  teamList.eq(picsIndex).addClass('hidden');
+  picsIndex++;
+  if(picsIndex === teamList.length){
+    picsIndex = 0;
+  }
+  teamList.eq(picsIndex).removeClass('hidden');
+}
+
+function smallWindowPrev() {
+  teamList.eq(picsIndex).addClass('hidden');
+  picsIndex--;
+  if(picsIndex < 0){
+    picsIndex = teamList.length -1;
+  }
+  teamList.eq(picsIndex).removeClass('hidden');
+}
+
+
+
+
+// prev.on('click',function () {
+//     var hidden = $(".hidden")
+//     $(".team-list").append(hidden);
+//     teamList.eq(picsIndex).removeClass('hidden');
+//     picsIndex++;
+//     if(picsIndex === teamList.length){
+//       picsIndex = 0;
+//     }
+//     teamList.eq(picsIndex).addClass('hidden');
+// })
+//
+// next.on('click',function () {
+//     var hidden = $(".hidden")
+//     $(".team-list").prepend(hidden);
+//     teamList.eq(picsIndex).removeClass('hidden');
+//     picsIndex--;
+//     if(picsIndex < 0){
+//       picsIndex = teamList.length -1;
+//     }
+//     teamList.eq(picsIndex).addClass('hidden');
+// })
 
   //  c)  smoothscroll - in progress
 
