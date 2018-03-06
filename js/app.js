@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-//smoothscroll - menu
+//  1.  smoothscroll - menu
 
 $("nav a").on('click', function(event) {
   if (this.hash !== "") {
@@ -15,7 +15,7 @@ $("nav a").on('click', function(event) {
    });
  })
 
-//team-changing - carousel
+//  2.  team-changing - carousel
 
 var prev = $(".prev");
 var next = $(".next");
@@ -24,12 +24,34 @@ var teamList = $(".team-list>div");
 var teamContainer = $(".team-list");
 var picsIndex = 0;
 
-console.log(teamList[0]);
-teamList.eq(0).addClass('hidden');
+// teamList.eq(0).addClass('hidden');
 
+  //  a)  conditions - what is size
+
+
+$(window).on("resize", windowSize);
+$(window).on("load", windowSize);
+
+function windowSize() {
+
+  if($('html').width() > 730)
+  {
+      teamList.eq(0).addClass('hidden');
+      teamList.eq(1).removeClass('hidden');
+      teamList.eq(2).removeClass('hidden');
+      teamList.eq(3).removeClass('hidden');
+
+  } else {
+      teamList.eq(0).addClass('hidden');
+      teamList.eq(1).removeClass('hidden');
+      teamList.eq(2).addClass('hidden');
+      teamList.eq(3).addClass('hidden');
+  }
+}
+
+  //  b)  events - arrows
 
 prev.on('click',function () {
-    // teamContainer.addClass('animation-prev');
     var hidden = $(".hidden")
     $(".team-list").append(hidden);
     teamList.eq(picsIndex).removeClass('hidden');
@@ -41,11 +63,6 @@ prev.on('click',function () {
 })
 
 next.on('click',function (event) {
-  // teamContainer.addClass('animation-next');
-  // teamContainer.on('animationend',function(event){
-  //   teamContainer.removeClass('animation-next');
-  // })
-  // var st = setTimeout(function () {
     var hidden = $(".hidden")
     $(".team-list").prepend(hidden);
     teamList.eq(picsIndex).removeClass('hidden');
@@ -54,17 +71,14 @@ next.on('click',function (event) {
       picsIndex = teamList.length -1;
     }
     teamList.eq(picsIndex).addClass('hidden');
-  // }, 1000);
 })
 
-
-
-//smoothscroll -team-changing - in progress
+  //  c)  smoothscroll - in progress
 
 
 
 
-//czytaj więcej - open section
+//  3.  czytaj więcej - open section
 
 var more = $('.more');
 more.addClass('hidden');
@@ -84,7 +98,7 @@ $('.more-content').on('click', function(){
   }
 })
 
-//form - validation
+//  4.  form - validation
 
 var error = $('.error');
 
@@ -119,10 +133,16 @@ $('input[type="submit"]').on("click", function(event) {
     error.text("Wiadomość wysłana");
   }
 })
-// RWD - hamburger
+
+
+
+
+//  5.  RWD - hamburger menu
+
 $('.open-menu').addClass('hidden');
 
-// a) open menu on click
+  // a) open menu on click
+
 $('.hamburger').on('click', function() {
     $('.open-menu').toggleClass('hidden');
     $('.close-menu').toggleClass('hidden');
@@ -133,19 +153,18 @@ $('.hamburger').on('click', function() {
       $('nav').css('display','block')
     }
 })
-// b) hide menu after click on li
+  // b) hide menu after click on li
+
 $('nav li').on('click', function() {
       $('nav').css('display','none');
       $('.open-menu').addClass('hidden');
       $('.close-menu').removeClass('hidden');
 })
 
-// c) always show menu after resize(>750px) window and hide after resize(<750px)
-$(document).load($(window).bind("resize", checkPosition));
+  // c) always show menu after resize(>750px) window and hide after resize(<750px)
 
-function checkPosition()
-{
-    if($(window).width() > 750)
+$(window).on("resize",function(){
+    if($('html').width() >= 730)
     {
         $('nav').css('display','block')
     } else {
@@ -153,7 +172,10 @@ function checkPosition()
         $('.close-menu').removeClass('hidden');
         $('.open-menu').addClass('hidden');
     }
-}
+})
+
+
+
 
 
 });
