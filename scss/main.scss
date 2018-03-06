@@ -566,6 +566,7 @@ section{
       @media(max-width: 730px){
         width: 285px;
       }
+    }
       div{
         height: 280px;
         width: 100%;
@@ -604,6 +605,9 @@ section{
     div{
       width: 45%;
       height: 100px;
+      @media(max-width: 730px){
+        width: 100%;
+      }
     }
   }
   .col-3{
@@ -611,9 +615,16 @@ section{
     justify-content: space-between;
     width: 100%;
     padding-top: 15px;
+    @media(max-width: 730px){
+      flex-direction: column;
+    }
     div{
       width: 31%;
       height: 150px;
+      @media(max-width: 730px){
+        width: 90%;
+        align-self: center;
+      }
     }
   }
 }
@@ -625,16 +636,26 @@ section{
     div{
       margin: 10px;
       width: 50%;
+      @media(max-width: 730px){
+        width: 100%;
+      }
       &.form-info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 50%;
+        @media(max-width: 730px){
+          width: 100%;
+        }
       }
       input{
         width: 100%;
         height: 40px;
         padding: 10px;
+        @media(max-width: 730px){
+          width: 100%;
+          margin-top: 10px;
+        }
       }
       textarea{
         width: 100%;
@@ -671,13 +692,25 @@ section{
 //section - ninth - contact
 #ninth-section {
   height: 384px;
+  @media(max-width: 730px){
+    height: 100%;
+  }
   .col-3{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: 730px){
+      flex-direction: column;
+      text-align: center;
+
+    }
     .ninth-section-left {
       width: 40%;
       text-align: right;
+      @media(max-width: 730px){
+        text-align: center;
+        width: 90%;
+      }
       .logo-contact{
         background-image: url(../images/vrmind_logo_fiol.png);
         width: 250px;
@@ -697,11 +730,23 @@ section{
       width: 5px;
       margin-bottom: 30px;
       border-radius: 2px;
+      @media(max-width: 730px){
+        margin-top: 30px;
+        height: 5px;
+        width: 60px;
+      }
     }
     .contact-info{
       width: 40%;
+      @media(max-width: 730px){
+        width: 100%;
+        text-align: center;
+      }
       p{
         text-align: left;
+        @media(max-width: 730px){
+          text-align: center;
+        }
       }
       .info-mail{
         font-weight: 700;
@@ -729,36 +774,5 @@ footer{
     align-items: center;
     max-width: 850px;
     height: 100%;
-  }
-}
-//animation team-changing smooth-scroll
-.animation-next{
-  animation-name: next;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-
-}
-.animation-prev{
-  animation-name: prev;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-}
-
-
-@keyframes next {
-  0%{
-    transform: translate(0);
-  }
-  100%{
-    transform: translate(250px);
-  }
-}
-
-@keyframes prev {
-  0%{
-    transform: translate(0);
-  }
-  100%{
-    transform: translate(-250px);
   }
 }
