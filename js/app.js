@@ -97,31 +97,6 @@ function smallWindowPrev() {
   teamList.eq(picsIndex).removeClass('hidden');
 }
 
-
-
-
-// prev.on('click',function () {
-//     var hidden = $(".hidden")
-//     $(".team-list").append(hidden);
-//     teamList.eq(picsIndex).removeClass('hidden');
-//     picsIndex++;
-//     if(picsIndex === teamList.length){
-//       picsIndex = 0;
-//     }
-//     teamList.eq(picsIndex).addClass('hidden');
-// })
-//
-// next.on('click',function () {
-//     var hidden = $(".hidden")
-//     $(".team-list").prepend(hidden);
-//     teamList.eq(picsIndex).removeClass('hidden');
-//     picsIndex--;
-//     if(picsIndex < 0){
-//       picsIndex = teamList.length -1;
-//     }
-//     teamList.eq(picsIndex).addClass('hidden');
-// })
-
   //  c)  smoothscroll - in progress
 
 
@@ -202,12 +177,15 @@ $('.hamburger').on('click', function() {
       $('nav').css('display','block')
     }
 })
-  // b) hide menu after click on li
+  // b) hide menu after click on li (if window is < 730px)
 
 $('nav li').on('click', function() {
-      $('nav').css('display','none');
-      $('.open-menu').addClass('hidden');
-      $('.close-menu').removeClass('hidden');
+  if($('html').width() < 730)
+  {
+        $('nav').css('display','none');
+        $('.open-menu').addClass('hidden');
+        $('.close-menu').removeClass('hidden');
+  }
 })
 
   // c) always show menu after resize(>750px) window and hide after resize(<750px)
